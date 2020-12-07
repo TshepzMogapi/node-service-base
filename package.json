@@ -1,0 +1,23 @@
+{
+  "name": "service-base",
+  "version": "1.0.0",
+  "description": "basic setup for node micro-service",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Tshepiso Mogapi",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
