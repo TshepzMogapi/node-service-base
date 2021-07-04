@@ -18,6 +18,8 @@
     "nodemon": "^2.0.6"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.2",
+    "nodemailer-sendgrid": "^1.0.3"
   }
 }
