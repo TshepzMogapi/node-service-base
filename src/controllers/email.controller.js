@@ -2,19 +2,13 @@ const emailService = require('../services/email.service');
 
 const sendEmail = async (req, res) => {
   try {
+    const { email } = req.body;
     res.send({ msg: 'testing' });
     const mailOptions = {
-      from: 'from',
-      to: 'email@test.com',
+      from: 'no-reply@domain.com',
+      to: email,
       subject: 'Testing Testing',
-      text:
-        `${'Hello'
-        + ',\n\n'
-        + 'We are testing \n'
-        + 'domain.com'
-        + '?token='}${
-          'token.token'
-        }\n\nThank You!\n`,
+      html: '<strong>testing</strong>',
     };
     emailService.sendEmail(mailOptions);
   } catch (error) {
