@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(emailRouter);
 
 app.get('/', (req, res) => {
+  console.log(`+++++++ Hello world ${new Date()}+++++++`);
   res.send('Hello World!');
 });
 
