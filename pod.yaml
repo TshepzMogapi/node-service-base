@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-email-app
+  labels:
+    type: api
+spec:
+  containers:
+  - name: node-email-container
+    image: tshepzmogapi/node-service-base-img:latest
