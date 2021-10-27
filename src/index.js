@@ -4,10 +4,12 @@ const app = express();
 const port = 3006;
 
 const emailRouter = require('./routes/email.route');
+const smslRouter = require('./routes/sms.route');
 
 app.use(express.json());
 
 app.use(emailRouter);
+app.use(smslRouter);
 
 app.get('/', (req, res) => {
   console.log(`+++++++ Hello world ${new Date()}+++++++`);
