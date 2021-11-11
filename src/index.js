@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+app.post('/pubsub', (req, res) => {
+  const base64Obj = Buffer.from(req.body.message.data, 'base64').toString();
+  console.log(JSON.parse(base64Obj));
+  res.send('Received');
+});
+
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
