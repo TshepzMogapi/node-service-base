@@ -4,7 +4,8 @@
   "description": "basic setup for node micro-service",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "SERVICE_NAME=test-service NODE_ENV=development nodemon src/index.js",
+    "start": "SERVICE_NAME=test-service node src/index.js"
   },
   "keywords": [
     "node"
@@ -23,6 +24,7 @@
     "express": "^4.17.1",
     "nodemailer": "^6.6.2",
     "nodemailer-sendgrid": "^1.0.3",
-    "twilio": "^3.70.0"
+    "twilio": "^3.70.0",
+    "winston": "^3.3.3"
   }
 }

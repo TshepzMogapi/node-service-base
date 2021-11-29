@@ -1,4 +1,5 @@
 const express = require('express');
+const logger = require('./logger');
 
 const app = express();
 const port = 3006;
@@ -12,11 +13,12 @@ app.use(emailRouter);
 app.use(smslRouter);
 
 app.get('/', (req, res) => {
-  console.log(`+++++++ Hello world ${new Date()}+++++++`);
-  res.send('Hello World!');
+  logger.info('Health Check');
+  res.send('We are up and running');
 });
 
 app.post('/pubsub', (req, res) => {
+  logger.info('Pub Sub Message Received');
   const base64Obj = Buffer.from(req.body.message.data, 'base64').toString();
   console.log(JSON.parse(base64Obj));
   res.send('Received');
